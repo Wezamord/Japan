@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Stick&display=swap');
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #F8F0DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.header_img {
+    height: 250px;
+    position: absolute;
+    z-index: 0;
+}
+
+h1 {
+    z-index: 2;
+    font-family: "Stick", sans-serif;
+    background-color: #F8F0DB;
+    padding-bottom: 8px;
+}
+
+h2 {
+    font-family: "Reggae One", system-ui;
+    text-shadow:
+    -1px -1px 0 #F8F0DB,
+    1px -1px 0 #F8F0DB,
+    -1px 1px 0 #F8F0DB,
+    1px 1px 0 #F8F0DB;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.statya {
+    display: flex;
+    column-gap: 20px;
+    padding: 0 50px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.info {
+    background-color: #F8F0DB;
+    width: 350px;
+    height: 150px;
+    border-radius: 11px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.column2 {
+    margin-top: 100px;
+}
+
+h3 {
+    font-family: "Reggae One", system-ui;
+    text-align: center;
+}
+
+.side-picture {
+    position: absolute;
+}
+
+.stick {
+    top: 0;
+    left: 0;
+    width: 85px;
+}
+
+.bamboo {
+    bottom: 0;
+    right: 0;
+    width: 50px;
+}
+
+.flag {
+    width: 27vw;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.map {
+    width: 30vw;
+    position: absolute;
+    right: 0;
+    bottom: 0%;
+}
+
+.line {
+    margin-top: 50px;
+    transform: translateY(4px);
+}
+
+.pink {
+    background-color: #BC002D;
+    padding: 50px 0;
+}
+
+.pink>div {
+    display: flex;
+    align-items: center;
+    padding: 0 3%;
+}
+.pink>div>div {
+    flex-direction: row-reverse;
+}
+
+.people {
+    width: 50vw;
+    border-radius: 11px;
+}
+
+.line2 {
+    background-color: #BC002D;
+}
+
+.pechat {
+    margin: 5% 10%;
+}
+
+footer {
+    height: 200px;
+    background-color: #3A523D;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    width: 60px;
+}
