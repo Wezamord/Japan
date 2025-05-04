@@ -30,3 +30,24 @@ transition2.lineTo(0, 80);
 transition2.closePath();
 transition2.fillStyle = 'black';
 transition2.fill();
+
+let support = document.querySelector('.support');
+let form = document.querySelector('form');
+support.addEventListener('click', function () {
+    form.style.display = 'flex';
+})
+
+
+
+let links = document.querySelectorAll('.scroll');
+let targetID;
+links.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+        event.preventDefault();
+        targetID = element.getAttribute('href');
+        document.querySelector(targetID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+})

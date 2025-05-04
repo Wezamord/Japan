@@ -8,11 +8,33 @@ body {
 }
 
 header {
-    background-color: #F8F0DB;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 300px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 99;
+    width: 100vh;
+    height: 40px;
+    background-color: #3A523D;
+    padding: 5px;
+    position: fixed;
+    transform: rotate(-90deg);
+    top: 47.9vh;
+    right: -49vh;
+    gap: 20px;
+}
+
+.scroll {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000;
 }
 
 .header_img {
@@ -24,31 +46,38 @@ header {
 h1 {
     z-index: 2;
     font-family: "Stick", sans-serif;
-    background-color: #F8F0DB;
+    background-color: white;
     padding-bottom: 8px;
+    text-align: center;
 }
 
 h2 {
     font-family: "Reggae One", system-ui;
     text-shadow:
-    -1px -1px 0 #F8F0DB,
-    1px -1px 0 #F8F0DB,
-    -1px 1px 0 #F8F0DB,
-    1px 1px 0 #F8F0DB;
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
     text-align: center;
     margin-bottom: 50px;
+}
+
+.excepttitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
 }
 
 .statya {
     display: flex;
     column-gap: 20px;
-    padding: 0 50px;
     align-items: flex-start;
     position: relative;
 }
 
 .info {
-    background-color: #F8F0DB;
+    background-color: white;
     width: 350px;
     height: 150px;
     border-radius: 11px;
@@ -92,16 +121,11 @@ h3 {
 }
 
 .flag {
-    width: 27vw;
-    margin-top: 100px;
-    margin-left: 100px;
+    width: calc(100vw - 950px);
 }
 
 .map {
-    width: 30vw;
-    position: absolute;
-    right: 0;
-    bottom: 0%;
+    height: 780px;
 }
 
 .line {
@@ -114,30 +138,21 @@ h3 {
     padding: 50px 0;
 }
 
-.pink>div {
-    display: flex;
-    align-items: center;
-    padding: 0 3%;
-}
-.pink>div>div {
+
+.pink .statya {
     flex-direction: row-reverse;
 }
 
-.people {
-    width: 50vw;
-    border-radius: 11px;
-}
 
 .line2 {
     background-color: #BC002D;
 }
 
 .pechat {
-    margin: 5% 10%;
+    width: 30vw;
 }
 
 footer {
-    height: 200px;
     background-color: #3A523D;
     margin-top: 50px;
     display: flex;
@@ -148,4 +163,180 @@ footer {
 
 footer img {
     width: 60px;
+}
+
+form {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    gap: 10px;
+    display: none;
+}
+input, button, textarea {
+    border-top: 3px #BC002D solid;
+    border-left: 3px #BC002D solid;
+    border-right: 3px #000000 solid;
+    border-bottom: 3px #000000 solid;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+*::placeholder {
+    color: #742035;
+}
+
+input, textarea {
+    width: 400px;
+    height: 40px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    nav {
+        display: none;
+    }
+    header {
+        height: 25vh;
+    }
+    .header_img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 825px) and (max-width: 1410px) {
+    .excepttitle {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .map {
+        position: absolute;
+        opacity: 0.25;
+    }
+    .pink>.excepttitle {
+        flex-direction: column;
+    }
+    .flag, .pechat {
+        width: 500px;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        height: 25vh;
+    }
+    .header_img {
+        width: 100%;
+        height: auto;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .info {
+        width: 40vw;
+    }
+    .statya {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .column2 {
+        margin-top: 0;
+    }
+    .map {
+        width: 40%;
+        height: auto;
+    }
+    input, textarea {
+        width: 80vw;
+        height: 40px;
+    }
+}
+
+@media (max-width: 825px) {
+    .statya {
+        flex-direction: column;
+        gap: 0;
+    }
+    .pink .statya {
+        flex-direction: column;
+    }
+    .map {
+        position: absolute;
+        opacity: 0.25;
+        width: 100vw;
+    }
+    .excepttitle {
+        justify-content: center;
+    }
+    .column2 {
+        margin-top: 20px;
+    }
+    .excepttitle {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .pink .excepttitle {
+        flex-direction: column;
+    }
+    .flag {
+        width: 60vw;
+    }
+    .pechat {
+        width: 60vw;
+    }
+    .info {
+        width: 90vw;
+    }
+}
+@media (max-width: 675px) {
+    h1 {
+        font-size: 22px;
+        background: none;
+        text-shadow:
+    -0  -1.5px  0   white,
+    0   -1.5px  0   white,
+    -0   1.5px  0   white,
+    0    1.5px  0   white,
+    -1.5px -0   0   white,
+    1.5px  -0   0   white,
+    -1.5px  0   0   white,
+    1.5px   0   0   white,
+    -1.5px -1.5px 0   white,
+    1.5px  -1.5px 0   white,
+    -1.5px  1.5px 0   white,
+    1.5px   1.5px 0   white,
+    -1.5px -1.5px 0   white,
+    1.5px  -1.5px 0   white,
+    -1.5px  1.5px 0   white,
+    1.5px   1.5px 0   white;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
+@media (max-height: 400px) {
+    header {
+        height: 100vh;
+    }
 }
